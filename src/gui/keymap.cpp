@@ -863,6 +863,7 @@ static QHash<QString, Key> getMap(KeyMap::Model model, KeyMap::Layout layout){
             map[key->name] = translatedKey;
         }
         break;
+    }   
 
     case KeyMap::M55:{
         // M55 mouse
