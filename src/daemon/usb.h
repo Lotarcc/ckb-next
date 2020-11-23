@@ -143,11 +143,11 @@ extern device_desc ignored_devices[];
 
 ///
 /// Uncomment to see USB packets received from the device through os_usbrecv()
-// #define DEBUG_USB_RECV
+#define DEBUG_USB_RECV
 
 ///
 /// Uncomment to see USB packets received from the device throug the input thread
-// #define DEBUG_USB_INPUT
+#define DEBUG_USB_INPUT
 
 ///
 /// \brief vendor_str Vendor/product string representations
