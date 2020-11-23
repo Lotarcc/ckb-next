@@ -1284,7 +1284,7 @@ int KeyMap::modelWidth(Model model){
     case SABRE:
     case SCIMITAR:
     case HARPOON:
-    case M55
+    case M55:
     case GLAIVE:
     case KATAR:
     case POLARIS:
