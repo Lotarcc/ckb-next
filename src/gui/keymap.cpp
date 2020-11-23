@@ -285,6 +285,18 @@ static const Key M65Keys[] = {
 #define M65_WIDTH       52
 #define M65_HEIGHT      67
 
+// Mouse map - M55_PRO
+static const Key M55Keys[] = {
+    {0, "Left Mouse", "mouse1", 10, 5, 14, 26, false, true}, {0, "Right Mouse", "mouse2", 30, 5, 14, 26, false, true}, {0, "Middle Mouse", "mouse3", 25, 11, 6, 7, false, true},
+    {0, "Wheel Up", "wheelup", 25, 7, 6, 5, false, true}, {0, "Wheel Down", "wheeldn", 25, 17, 6, 5, false, true},
+    {0, "DPI Cycle", "dpiup", 25, 23, 6, 10, false, true}, {0, "Logo Light", "dpi", 17, 40, 20, 20, true, false},
+    {0, "Forward", "mouse5", 3, 24, 5, 10, false, true}, {0, "Back", "mouse4", 3, 33, 5, 10, false, true}
+};
+#define KEYCOUNT_M55  (sizeof(M55Keys) / sizeof(Key))
+
+#define M55_WIDTH     M65_WIDTH
+#define M55_HEIGHT    M65_HEIGHT
+
 // Sabre
 static const Key SabreKeys[] = {
     {0, "Left Mouse", "mouse1", 8, 0, 14, 32, false, true}, {0, "Right Mouse", "mouse2", 30, 0, 14, 32, false, true}, {0, "Middle Mouse", "mouse3", 22, 9, 8, 7, false, true}, {0, "Front light", "front", 8, -2, 14, 8, true, false },
@@ -851,6 +863,17 @@ static QHash<QString, Key> getMap(KeyMap::Model model, KeyMap::Layout layout){
             map[key->name] = translatedKey;
         }
         break;
+    }   
+
+    case KeyMap::M55:{
+        // M55 mouse
+        for(const Key* key = M55Keys; key < M55Keys + KEYCOUNT_M55; key++){
+            Key translatedKey = *key;
+            translatedKey.x += translatedKey.width / 2;
+            translatedKey.y += translatedKey.height / 2;
+            map[key->name] = translatedKey;
+        }
+        break;        
     }
     case KeyMap::GLAIVE:{
         // Glaive mouse
@@ -1149,6 +1172,8 @@ KeyMap::Model KeyMap::getModel(const QString& name){
         return SCIMITAR;
     if(lower == "harpoon")
         return HARPOON;
+    if(lower == "m55")
+        return M55;
     if(lower == "glaive")
         return GLAIVE;
     if(lower == "katar")
@@ -1200,6 +1225,8 @@ QString KeyMap::getModel(KeyMap::Model model){
         return "scimitar";
     case HARPOON:
         return "harpoon";
+    case M55:
+        return "m55";
     case GLAIVE:
         return "glaive";
     case KATAR:
@@ -1257,6 +1284,7 @@ int KeyMap::modelWidth(Model model){
     case SABRE:
     case SCIMITAR:
     case HARPOON:
+    case M55:
     case GLAIVE:
     case KATAR:
     case POLARIS:
@@ -1290,6 +1318,7 @@ int KeyMap::modelHeight(Model model){
     case SABRE:
     case SCIMITAR:
     case HARPOON:
+    case M55:
     case GLAIVE:
     case KATAR:
     case POLARIS:
@@ -1371,6 +1400,9 @@ QString KeyMap::friendlyName(const QString& key, Layout layout){
     map = KeyMap(HARPOON, layout);
     if(map.contains(key))
         return map[key].friendlyName();
+    map = KeyMap(M55, layout);
+    if(map.contains(key))
+        return map[key].friendlyName();       
     map = KeyMap(IRONCLAW, layout);
     if(map.contains(key))
         return map[key].friendlyName();
