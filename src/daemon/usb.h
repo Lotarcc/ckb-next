@@ -92,7 +92,7 @@
 #define IS_M65(kb)           ((kb)->vendor == V_CORSAIR && ((kb)->product == P_M65 || (kb)->product == P_M65_PRO || (kb)->product == P_M65_RGB_ELITE))
 
 #define P_M55_PRO            0x1b70
-#define IS_M55(kb)           ((kb)->vendor == V_CORSAIR && ((kb)->product == P_M55_PRO))
+#define IS_M55(kb)           ((kb)->vendor == V_CORSAIR && (kb)->product == P_M55_PRO)
 
 #define P_M95                0x1b06
 
