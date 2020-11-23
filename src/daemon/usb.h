@@ -139,7 +139,7 @@ extern device_desc ignored_devices[];
 
 ///
 /// Uncomment to see USB packets sent to the device
-// #define DEBUG_USB_SEND
+#define DEBUG_USB_SEND
 
 ///
 /// Uncomment to see USB packets received from the device through os_usbrecv()
