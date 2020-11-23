@@ -169,7 +169,7 @@ void KeyWidget::paintEvent(QPaintEvent*){
             xpos = 2.f;
         } else if(model == KeyMap::M55){
             if(!m55Overlay)
-                m55Overlay = new QImage(":/img/overlay_m55.png")
+                m55Overlay = new QImage(":/img/overlay_m55.png");
             overlay = m55Overlay;
             xpos = 2.f;
         }
