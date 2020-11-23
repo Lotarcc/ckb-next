@@ -1173,7 +1173,7 @@ KeyMap::Model KeyMap::getModel(const QString& name){
     if(lower == "harpoon")
         return HARPOON;
     if(lower == "m55")
-        return M55
+        return M55;
     if(lower == "glaive")
         return GLAIVE;
     if(lower == "katar")
