@@ -91,6 +91,10 @@
 #define P_M65_RGB_ELITE      0x1b5a
 #define IS_M65(kb)           ((kb)->vendor == V_CORSAIR && ((kb)->product == P_M65 || (kb)->product == P_M65_PRO || (kb)->product == P_M65_RGB_ELITE))
 
+#define P_M55                0x1b12
+#define P_M55_PRO            0x1b2e
+#define IS_M55(kb)           ((kb)->vendor == V_CORSAIR && ((kb)->product == P_M55 || (kb)->product == P_M55_PRO)
+
 #define P_M95                0x1b06
 
 #define P_SABRE_O            0x1b14 /* optical */
