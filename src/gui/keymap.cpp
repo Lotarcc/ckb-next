@@ -289,7 +289,7 @@ static const Key M65Keys[] = {
 static const Key M55Keys[] = {
     {0, "Left Mouse", "mouse1", 10, 5, 14, 26, false, true}, {0, "Right Mouse", "mouse2", 30, 5, 14, 26, false, true}, {0, "Middle Mouse", "mouse3", 25, 11, 6, 7, false, true},
     {0, "Wheel Up", "wheelup", 25, 7, 6, 5, false, true}, {0, "Wheel Down", "wheeldn", 25, 17, 6, 5, false, true},
-    {0, "DPI Cycle", "dpiup", 25, 23, 6, 10, false, true}, {0, "DPI Light", "dpi", 5, 4, 5, 12 true, false},
+    {0, "DPI Cycle", "dpiup", 25, 23, 6, 10, false, true}, {0, "DPI Light", "dpi", 5, 4, 5, 12, true, false},
     {0, "Forward", "mouse5", 3, 24, 5, 10, false, true}, {0, "Back", "mouse4", 3, 33, 5, 10, false, true}, {0, "Forward", "mouse6", 3, 24, 5, 10, false, true}, {0, "Back", "mouse7", 3, 33, 5, 10, false, true} 
     {0, "Logo", "back", 14, 50, 24, 12, true, false}
 };
